@@ -1,15 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Contact Form</title>
-</head>
-<body>
-Thank you <?php echo $_POST["name"]; ?> for contacting us!<br>
-Your email address is: <?php echo $_POST["email"]; ?><br>
-Your issue type is: <?php echo $_POST["issue"]; ?><br>
-Your Comment is: <?php echo $_POST["comment"]; ?><br>
-</body>
-</html>
+<?php
+
+  $name = filter_input(INPUT_POST, 'name');
+  $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+  $message = filter_input(INPUT_POST, 'message');
+
+  //validate all fields completed
+  if(empty($name)) {
+    $name_error = 'please enter your name';
+  } 
+  
+  if(empty($email)) {
+    $email_error = 'please enter your email address';
+  }
+
+  if(empty($message)) {
+    $message_error = 'please submit a message';
+  }
+
+  if(empty($name_error) && empty($email_error) && empty($message_error)) {
+    include('results.php');
+  } else {
+      include('index.php');
+  }
+
+?>
+
