@@ -21,8 +21,6 @@
         border: 3px;
         border-radius:10px;
         background: #36454F;
-        /*display: flex;
-        justify-content: center;*/
     }
 
     #heading {
