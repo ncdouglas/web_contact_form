@@ -9,6 +9,7 @@
 <style>
     * {
         box-sizing: border-box;
+        font-family: sans-serif; 
     }
 
     body {
@@ -26,6 +27,7 @@
     #heading {
         text-align: center;
         color: #fafafa;
+        padding: 5px 0 5px 0;
     }
 
     form {

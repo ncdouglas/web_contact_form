@@ -18,21 +18,19 @@
         border-radius:10px;
         background: #36454F;
         padding: 10px 0px 10px 0px;
-    }
-
-    #text {
         text-align: center;
         color: #fafafa;
+        font-family: sans-serif; 
     }
 
 </style>
 <body>
     <div class="style">
         <h1 class="style" id="text">Thank you for contacting us! We have recieved the following:</h1>
-            <div class="style" id="text">
-                <p>Name: <?php echo $name ?></p><br>
-                <p>Email: <?php echo $email ?></p><br>
-                <p>Message: <?php echo $message?></p>
+            <div class="style">
+                <p><strong>Name:</strong> <?php echo $name ?></p><br>
+                <p><strong>Email:</strong> <?php echo $email ?></p><br>
+                <p><strong>Message:</strong><br><?php echo $message?></p>
             </div>
     </div>
 </body>
